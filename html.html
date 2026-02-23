@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Monroe — Photography & Film</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Syne:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">Alex <span>Monroe</span></a>
+    <ul class="nav-links">
+      <li><a href="#portfolio">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+
+    <div class="hero-film-strip" aria-hidden="true">
+      <div class="film-frame"><div class="shape">Landscape</div></div>
+      <div class="film-frame"><div class="shape">Portrait</div></div>
+      <div class="film-frame"><div class="shape">Editorial</div></div>
+      <div class="film-frame"><div class="shape">Commercial</div></div>
+      <div class="film-frame"><div class="shape">Cinematic</div></div>
+      <div class="film-frame"><div class="shape">Fashion</div></div>
+      <div class="film-frame"><div class="shape">Landscape</div></div>
+      <div class="film-frame"><div class="shape">Portrait</div></div>
+      <div class="film-frame"><div class="shape">Editorial</div></div>
+      <div class="film-frame"><div class="shape">Commercial</div></div>
+      <div class="film-frame"><div class="shape">Cinematic</div></div>
+      <div class="film-frame"><div class="shape">Fashion</div></div>
+    </div>
+
+    <div class="hero-content">
+      <p class="hero-label">Photography &amp; Film</p>
+      <h1 class="hero-title">
+        Frames that<br>
+        <em>tell stories</em>
+      </h1>
+      <p class="hero-sub">Visual storytelling through photography and film. Based in Los Angeles — available worldwide for editorial, commercial, and documentary work.</p>
+      <div class="hero-cta">
+        <a href="#portfolio" class="btn-primary">View Work</a>
+        <a href="#contact" class="btn-secondary">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio">
+    <div class="portfolio-header reveal">
+      <div>
+        <p class="section-label">Selected Works</p>
+        <h2 class="section-title">The <em>Portfolio</em></h2>
+      </div>
+      <div class="portfolio-filter">
+        <button class="filter-btn active">All</button>
+        <button class="filter-btn">Photo</button>
+        <button class="filter-btn">Film</button>
+        <button class="filter-btn">Editorial</button>
+      </div>
+    </div>
+
+    <div class="portfolio-grid">
+      <!-- portfolio items unchanged -->
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <!-- unchanged content -->
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-inner">
+      <div class="reveal">
+        <p class="section-label">Let's Create Together</p>
+        <h2 class="section-title">Start a <em>conversation</em></h2>
+        <p class="contact-intro">
+          Have a project in mind? I'd love to hear about it.
+        </p>
+      </div>
+
+      <form class="contact-form reveal" onsubmit="handleSubmit(event)">
+        <!-- form unchanged -->
+        <button type="submit" class="form-submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Alex <span>Monroe</span></div>
+    <p class="footer-copy">© 2026 Alex Monroe. All rights reserved.</p>
+    <div class="footer-social">
+      <a href="#">Instagram</a>
+      <a href="#">Vimeo</a>
+      <a href="#">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

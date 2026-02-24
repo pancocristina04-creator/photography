@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alex Monroe — Photography & Film</title>
+  <title>Paul Bina — Photography</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Syne:wght@400;700&display=swap" rel="stylesheet" />
@@ -16,7 +16,7 @@
 
   <!-- NAV -->
   <nav>
-    <a href="#" class="nav-logo">Alex <span>Monroe</span></a>
+    <a href="#" class="nav-logo">Paul <span>Bina</span></a>
     <ul class="nav-links">
       <li><a href="#portfolio">Work</a></li>
       <li><a href="#about">About</a></li>
@@ -29,28 +29,30 @@
     <div class="hero-bg"></div>
     <div class="hero-grid"></div>
 
+    <!-- Decorative film strip -->
     <div class="hero-film-strip" aria-hidden="true">
       <div class="film-frame"><div class="shape">Landscape</div></div>
       <div class="film-frame"><div class="shape">Portrait</div></div>
       <div class="film-frame"><div class="shape">Editorial</div></div>
       <div class="film-frame"><div class="shape">Commercial</div></div>
-      <div class="film-frame"><div class="shape">Cinematic</div></div>
+      <div class="film-frame"><div class="shape">Architecture</div></div>
       <div class="film-frame"><div class="shape">Fashion</div></div>
+      <!-- Duplicate for seamless loop -->
       <div class="film-frame"><div class="shape">Landscape</div></div>
       <div class="film-frame"><div class="shape">Portrait</div></div>
       <div class="film-frame"><div class="shape">Editorial</div></div>
       <div class="film-frame"><div class="shape">Commercial</div></div>
-      <div class="film-frame"><div class="shape">Cinematic</div></div>
+      <div class="film-frame"><div class="shape">Architecture</div></div>
       <div class="film-frame"><div class="shape">Fashion</div></div>
     </div>
 
     <div class="hero-content">
-      <p class="hero-label">Photography &amp; Film</p>
+      <p class="hero-label">Photography</p>
       <h1 class="hero-title">
-        Frames that<br>
-        <em>tell stories</em>
+        Moments that<br>
+        <em>speak volumes</em>
       </h1>
-      <p class="hero-sub">Visual storytelling through photography and film. Based in Los Angeles — available worldwide for editorial, commercial, and documentary work.</p>
+      <p class="hero-sub">Capturing stories through the lens. Based in Los Angeles, available worldwide for editorial, commercial, and documentary photography.</p>
       <div class="hero-cta">
         <a href="#portfolio" class="btn-primary">View Work</a>
         <a href="#contact" class="btn-secondary">Get in touch</a>
@@ -66,27 +68,151 @@
         <h2 class="section-title">The <em>Portfolio</em></h2>
       </div>
       <div class="portfolio-filter">
-        <button class="filter-btn active">All</button>
-        <button class="filter-btn">Photo</button>
-        <button class="filter-btn">Film</button>
-        <button class="filter-btn">Editorial</button>
+        <button class="filter-btn active" type="button">All</button>
+        <button class="filter-btn" type="button">Portrait</button>
+        <button class="filter-btn" type="button">Landscape</button>
+        <button class="filter-btn" type="button">Editorial</button>
       </div>
     </div>
 
     <div class="portfolio-grid">
-      <!-- portfolio items unchanged -->
-       <div class="portfolio-item">
-          <img src="images/RAW_6145.jpg" alt=description test 1" />
+      <div class="portfolio-item reveal">
+        <div class="portfolio-placeholder">
+          <div class="portfolio-placeholder-inner">
+            <div class="placeholder-icon">📷</div>
+            <span class="placeholder-text">Your Image Here</span>
+          </div>
         </div>
-      <div class="portfolio-item">
-        <img src="images/RAW_5945.jpg" alt=description test 2" />
+        <div class="portfolio-overlay">
+          <p class="portfolio-overlay-cat">Editorial · Photography</p>
+          <h3 class="portfolio-overlay-title">Golden Hour Sessions</h3>
+        </div>
+      </div>
+
+      <div class="portfolio-item reveal">
+        <div class="portfolio-placeholder">
+          <div class="portfolio-placeholder-inner">
+            <div class="placeholder-icon">📷</div>
+            <span class="placeholder-text">Your Image Here</span>
+          </div>
+        </div>
+        <div class="portfolio-overlay">
+          <p class="portfolio-overlay-cat">Portrait · Photography</p>
+          <h3 class="portfolio-overlay-title">Quiet Portraits</h3>
+        </div>
+      </div>
+
+      <div class="portfolio-item reveal">
+        <div class="portfolio-placeholder">
+          <div class="portfolio-placeholder-inner">
+            <div class="placeholder-icon">📷</div>
+            <span class="placeholder-text">Your Image Here</span>
+          </div>
+        </div>
+        <div class="portfolio-overlay">
+          <p class="portfolio-overlay-cat">Commercial · Photography</p>
+          <h3 class="portfolio-overlay-title">Brand Campaign</h3>
+        </div>
+      </div>
+
+      <div class="portfolio-item reveal">
+        <div class="portfolio-placeholder">
+          <div class="portfolio-placeholder-inner">
+            <div class="placeholder-icon">📷</div>
+            <span class="placeholder-text">Your Image Here</span>
+          </div>
+        </div>
+        <div class="portfolio-overlay">
+          <p class="portfolio-overlay-cat">Documentary · Photography</p>
+          <h3 class="portfolio-overlay-title">Urban Stories</h3>
+        </div>
+      </div>
+
+      <div class="portfolio-item reveal">
+        <div class="portfolio-placeholder">
+          <div class="portfolio-placeholder-inner">
+            <div class="placeholder-icon">📷</div>
+            <span class="placeholder-text">Your Image Here</span>
+          </div>
+        </div>
+        <div class="portfolio-overlay">
+          <p class="portfolio-overlay-cat">Fashion · Editorial</p>
+          <h3 class="portfolio-overlay-title">Autumn Collection</h3>
+        </div>
+      </div>
+
+      <div class="portfolio-item reveal">
+        <div class="portfolio-placeholder">
+          <div class="portfolio-placeholder-inner">
+            <div class="placeholder-icon">📷</div>
+            <span class="placeholder-text">Your Image Here</span>
+          </div>
+        </div>
+        <div class="portfolio-overlay">
+          <p class="portfolio-overlay-cat">Landscape · Photography</p>
+          <h3 class="portfolio-overlay-title">Desert Light</h3>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ABOUT -->
   <section id="about">
-    <!-- unchanged content -->
+    <div class="about-visual reveal">
+      <div class="about-photo-frame">
+        <div class="about-photo-frame-inner">
+          <div class="about-photo-icon">👤</div>
+          <span class="about-photo-label">Your Photo Here</span>
+        </div>
+      </div>
+      <div class="about-accent-line"></div>
+      <div class="about-accent-square"></div>
+    </div>
+
+    <div class="about-content reveal">
+      <p class="section-label">About Me</p>
+      <h2 class="section-title">A <em>visual</em> storyteller</h2>
+      <p class="about-bio">
+        I believe every frame holds a universe. With over a decade behind the lens,
+        I've learned that the most <em>powerful images</em> aren't captured, they're
+        felt. From intimate portraits to sweeping landscapes, my work
+        explores the quiet tension between light and shadow.
+      </p>
+
+      <div class="about-stats">
+        <div>
+          <div class="stat-number">10+</div>
+          <div class="stat-label">Years of experience</div>
+        </div>
+        <div>
+          <div class="stat-number">300+</div>
+          <div class="stat-label">Projects completed</div>
+        </div>
+        <div>
+          <div class="stat-number">40+</div>
+          <div class="stat-label">Countries visited</div>
+        </div>
+      </div>
+
+      <div class="about-details">
+        <div>
+          <p class="about-detail-label">Based in</p>
+          <p class="about-detail-value">Los Angeles, CA</p>
+        </div>
+        <div>
+          <p class="about-detail-label">Available for</p>
+          <p class="about-detail-value">Worldwide Projects</p>
+        </div>
+        <div>
+          <p class="about-detail-label">Specialties</p>
+          <p class="about-detail-value">Editorial, Commercial, Documentary</p>
+        </div>
+        <div>
+          <p class="about-detail-label">Equipment</p>
+          <p class="about-detail-value">Sony & Canon Systems</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- CONTACT -->
@@ -96,12 +222,44 @@
         <p class="section-label">Let's Create Together</p>
         <h2 class="section-title">Start a <em>conversation</em></h2>
         <p class="contact-intro">
-          Have a project in mind? I'd love to hear about it.
+          Have a project in mind? I'd love to hear about it. Reach out and let's
+          talk about how we can create something extraordinary together.
         </p>
       </div>
 
       <form class="contact-form reveal" onsubmit="handleSubmit(event)">
-        <!-- form unchanged -->
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">First Name</label>
+            <input type="text" class="form-input" placeholder="Jane" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Last Name</label>
+            <input type="text" class="form-input" placeholder="Smith" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-input" placeholder="jane@example.com" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Project Type</label>
+            <select class="form-select form-input">
+              <option value="">Select a type...</option>
+              <option>Editorial Photography</option>
+              <option>Commercial Photography</option>
+              <option>Portrait Session</option>
+              <option>Brand Campaign</option>
+              <option>Wedding / Event</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Tell me about your project</label>
+          <textarea class="form-textarea" placeholder="Describe your vision, timeline, and budget..." required></textarea>
+        </div>
         <button type="submit" class="form-submit">Send Message</button>
       </form>
     </div>
@@ -109,11 +267,11 @@
 
   <!-- FOOTER -->
   <footer>
-    <div class="footer-logo">Alex <span>Monroe</span></div>
-    <p class="footer-copy">© 2026 Alex Monroe. All rights reserved.</p>
+    <div class="footer-logo">Paul <span>Bina</span></div>
+    <p class="footer-copy">© 2026 Paul Bina. All rights reserved.</p>
     <div class="footer-social">
       <a href="#">Instagram</a>
-      <a href="#">Vimeo</a>
+      <a href="#">Behance</a>
       <a href="#">LinkedIn</a>
     </div>
   </footer>
@@ -121,6 +279,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-
-

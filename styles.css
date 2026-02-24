@@ -519,6 +519,25 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+/* Make image frames behave like containers */
+.film-frame,
+.portfolio-placeholder,
+.about-photo-frame {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Make inserted images fill their frames correctly */
+.film-frame img,
+.portfolio-placeholder img,
+.about-photo-frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
 @media (max-width: 900px) {
   nav { padding: 24px 32px; }
@@ -532,4 +551,5 @@ footer {
   .form-row { grid-template-columns: 1fr; }
   .hero-film-strip { display: none; }
 }
+
 

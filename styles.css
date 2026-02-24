@@ -4,8 +4,8 @@
   --black: #23140C;
   --dark: #2d1c12;
   --warm: #3a2418;
-  --accent: #91040C;
-  --accent-light: #b30510;
+  --accent: #8B0000;
+  --accent-light: #B22222;
   --cream: #D0BA98;
   --muted: #9d8a70;
   --white: #e8dcc5;
@@ -36,7 +36,7 @@ body {
 .cursor-ring {
   position: fixed;
   width: 36px; height: 36px;
-  border: 1px solid rgba(145, 4, 12, 0.5);
+  border: 1px solid rgba(139, 0, 0, 0.5);
   border-radius: 50%;
   pointer-events: none;
   z-index: 9998;
@@ -56,10 +56,11 @@ nav {
 }
 .nav-logo {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 22px;
+  font-size: 28px;
   letter-spacing: 0.08em;
   color: var(--cream);
   text-decoration: none;
+  font-weight: 400;
 }
 .nav-logo span { color: var(--accent); font-style: italic; }
 .nav-links { display: flex; gap: 40px; list-style: none; }
@@ -84,14 +85,14 @@ nav {
 .hero-bg {
   position: absolute; inset: 0;
   background:
-    radial-gradient(ellipse 60% 80% at 70% 40%, rgba(145,4,12,0.15) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 60% at 20% 80%, rgba(145,4,12,0.08) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 80% at 70% 40%, rgba(139,0,0,0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 60% at 20% 80%, rgba(139,0,0,0.1) 0%, transparent 50%),
     linear-gradient(160deg, #23140C 0%, #2d1c12 50%, #23140C 100%);
 }
 .hero-grid {
   position: absolute; inset: 0;
-  background-image: linear-gradient(rgba(145,4,12,0.08) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(145,4,12,0.08) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(139,0,0,0.1) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(139,0,0,0.1) 1px, transparent 1px);
   background-size: 80px 80px;
   mask-image: radial-gradient(ellipse 70% 70% at 70% 50%, black 20%, transparent 80%);
 }
@@ -138,8 +139,8 @@ nav {
   font-family: 'Cormorant Garamond', serif;
   font-size: 11px;
   letter-spacing: 0.1em;
-  color: rgba(145,4,12,0.4);
-  border: 1px solid rgba(145,4,12,0.2);
+  color: rgba(139,0,0,0.5);
+  border: 1px solid rgba(139,0,0,0.25);
 }
 
 .hero-content { position: relative; z-index: 2; max-width: 640px; }
@@ -239,7 +240,7 @@ section { padding: 120px 60px; }
   display: flex; gap: 8px;
 }
 .filter-btn {
-  background: none; border: 1px solid rgba(145,4,12,0.3);
+  background: none; border: 1px solid rgba(139,0,0,0.35);
   color: var(--muted);
   font-family: 'Syne', sans-serif;
   font-size: 10px;
@@ -252,7 +253,7 @@ section { padding: 120px 60px; }
 .filter-btn.active, .filter-btn:hover {
   border-color: var(--accent);
   color: var(--accent);
-  background: rgba(145,4,12,0.1);
+  background: rgba(139,0,0,0.12);
 }
 
 .portfolio-grid {
@@ -295,10 +296,10 @@ section { padding: 120px 60px; }
 
 .placeholder-icon {
   width: 40px; height: 40px;
-  border: 1px solid rgba(145,4,12,0.3);
+  border: 1px solid rgba(139,0,0,0.35);
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  color: rgba(145,4,12,0.4);
+  color: rgba(139,0,0,0.5);
   font-size: 16px;
 }
 .placeholder-text {
@@ -357,7 +358,7 @@ section { padding: 120px 60px; }
   content: '';
   position: absolute; inset: 0;
   background:
-    radial-gradient(ellipse 60% 80% at 30% 40%, rgba(145,4,12,0.15) 0%, transparent 60%);
+    radial-gradient(ellipse 60% 80% at 30% 40%, rgba(139,0,0,0.18) 0%, transparent 60%);
 }
 .about-photo-frame-inner {
   position: absolute; inset: 0;
@@ -366,11 +367,11 @@ section { padding: 120px 60px; }
 }
 .about-photo-icon {
   width: 64px; height: 64px;
-  border: 1px solid rgba(145,4,12,0.3);
+  border: 1px solid rgba(139,0,0,0.35);
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   font-size: 24px;
-  color: rgba(145,4,12,0.4);
+  color: rgba(139,0,0,0.5);
 }
 .about-photo-label {
   font-family: 'Cormorant Garamond', serif;
@@ -389,7 +390,7 @@ section { padding: 120px 60px; }
   position: absolute;
   bottom: -20px; left: -20px;
   width: 80px; height: 80px;
-  border: 1px solid rgba(145,4,12,0.3);
+  border: 1px solid rgba(139,0,0,0.35);
 }
 .about-content {}
 .about-bio {
@@ -405,7 +406,7 @@ section { padding: 120px 60px; }
   margin-top: 48px;
   display: grid; grid-template-columns: 1fr 1fr;
   gap: 32px;
-  border-top: 1px solid rgba(145,4,12,0.2);
+  border-top: 1px solid rgba(139,0,0,0.25);
   padding-top: 40px;
 }
 .about-detail-label {
@@ -463,8 +464,8 @@ section { padding: 120px 60px; }
   color: var(--accent);
 }
 .form-input, .form-select, .form-textarea {
-  background: rgba(145,4,12,0.08);
-  border: 1px solid rgba(145,4,12,0.25);
+  background: rgba(139,0,0,0.1);
+  border: 1px solid rgba(139,0,0,0.3);
   color: var(--cream);
   font-family: 'Syne', sans-serif;
   font-size: 14px;
@@ -498,7 +499,7 @@ section { padding: 120px 60px; }
 /* FOOTER */
 footer {
   background: var(--black);
-  border-top: 1px solid rgba(145,4,12,0.2);
+  border-top: 1px solid rgba(139,0,0,0.25);
   padding: 48px 60px;
   display: flex; align-items: center; justify-content: space-between;
 }

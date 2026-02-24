@@ -1,14 +1,14 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --black: #23140C;
-  --dark: #2d1c12;
-  --warm: #3a2418;
-  --accent: #8B0000;
-  --accent-light: #B22222;
-  --cream: #D0BA98;
-  --muted: #9d8a70;
-  --white: #e8dcc5;
+  --black: #111111;
+  --dark: #2A2521;
+  --warm: #F7F3EC;
+  --accent: #E8DED1;
+  --accent-light: #B7A795;
+  --cream: #566B7F;
+  --muted: #2F4A43;
+  --white: #B08A52;
 }
 
 html { scroll-behavior: smooth; }
@@ -532,3 +532,4 @@ footer {
   .form-row { grid-template-columns: 1fr; }
   .hero-film-strip { display: none; }
 }
+

@@ -1,18 +1,4 @@
-// Custom cursor
-const cursor = document.getElementById('cursor');
-const ring = document.getElementById('cursorRing');
-
-document.addEventListener('mousemove', (e) => {
-  cursor.style.left = e.clientX + 'px';
-  cursor.style.top = e.clientY + 'px';
-
-  setTimeout(() => {
-    ring.style.left = e.clientX + 'px';
-    ring.style.top = e.clientY + 'px';
-  }, 60);
-});
-
-// Scroll reveal
+// ─── Scroll reveal ──────────────────────────────────────────────────────────
 const reveals = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
@@ -25,7 +11,7 @@ const observer = new IntersectionObserver((entries) => {
 
 reveals.forEach((el) => observer.observe(el));
 
-// Portfolio filter (visual state only)
+// ─── Portfolio filter (visual state only) ───────────────────────────────────
 document.querySelectorAll('.filter-btn').forEach((btn) => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.filter-btn').forEach((b) => b.classList.remove('active'));
@@ -33,7 +19,7 @@ document.querySelectorAll('.filter-btn').forEach((btn) => {
   });
 });
 
-// Form submit (UI feedback only)
+// ─── Contact form submit (UI feedback only) ──────────────────────────────────
 function handleSubmit(e) {
   e.preventDefault();
 

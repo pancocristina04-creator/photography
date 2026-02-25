@@ -30,6 +30,10 @@
   --cream: var(--sandstone);
   --muted: var(--sage);
   --white: var(--gold);
+
+  /* Nav height – used for scroll-margin-top and JS observer offset.
+     Update this value in every breakpoint that changes nav padding.    */
+  --nav-h: 88px;
 }
 
 html { scroll-behavior: smooth; }
@@ -57,7 +61,17 @@ nav {
   z-index: 100;
   padding: 28px 60px;
   display: flex; align-items: center; justify-content: space-between;
+  /* Hero state: gradient fades to transparent at the bottom */
   background: linear-gradient(to bottom, rgba(var(--obsidian-rgb), 0.95) 0%, transparent 100%);
+  /* Smooth transition when switching to/from solid state */
+  transition: background 0.35s ease, box-shadow 0.35s ease;
+}
+/* Applied by JS once the hero scrolls out of view */
+nav.nav-scrolled {
+  background: rgba(var(--obsidian-rgb), 0.97);
+  box-shadow: 0 1px 0 rgba(var(--taupe-rgb), 0.12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 .nav-logo {
   font-family: 'Cormorant Garamond', serif;
@@ -220,6 +234,9 @@ nav {
 
 /* ─── SECTION COMMON ───────────────────────────────────────────────────────── */
 section { padding: 120px 60px; }
+/* Anchor-link offset: prevents the fixed nav from covering section headings
+   when the user clicks a nav link or the browser jumps to an id.           */
+section[id] { scroll-margin-top: var(--nav-h); }
 .section-label {
   font-size: 10px;
   letter-spacing: 0.35em;
@@ -564,6 +581,7 @@ footer {
 
 /* ── TABLET (≤ 1024px) ───────────────────────────────────────────────────────── */
 @media (max-width: 1024px) {
+  :root { --nav-h: 76px; }
   nav { padding: 22px 40px; }
   .hero { padding: 0 40px 70px; }
   section { padding: 100px 40px; }
@@ -577,6 +595,7 @@ footer {
 
 /* ── SMALL TABLET / LARGE MOBILE (≤ 900px) ─────────────────────────────────── */
 @media (max-width: 900px) {
+  :root { --nav-h: 68px; }
   nav { padding: 18px 28px; }
   .nav-links { gap: 24px; }
 
@@ -612,6 +631,7 @@ footer {
 
 /* ── MOBILE (≤ 600px) ────────────────────────────────────────────────────────── */
 @media (max-width: 600px) {
+  :root { --nav-h: 60px; }
   nav {
     padding: 16px 20px;
     gap: 12px;

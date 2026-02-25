@@ -576,6 +576,118 @@ footer {
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════════
+   GALLERY CATEGORY PAGES  (portrait.html / landscape.html / editorial.html)
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+/* ── Compact hero banner ──────────────────────────────────────────────────── */
+.gallery-hero {
+  min-height: 52vh;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 60px 64px;
+  overflow: hidden;
+}
+.gallery-hero .hero-bg,
+.gallery-hero .hero-grid { position: absolute; inset: 0; }
+.gallery-hero .hero-bg {
+  background:
+    radial-gradient(ellipse 55% 80% at 80% 30%, rgba(var(--gold-rgb), 0.10) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 60% at 15% 90%, rgba(var(--teal-rgb), 0.09) 0%, transparent 55%),
+    linear-gradient(160deg, var(--black) 0%, var(--dark) 55%, var(--black) 100%);
+}
+.gallery-hero .hero-grid {
+  background-image:
+    linear-gradient(rgba(var(--taupe-rgb), 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--taupe-rgb), 0.08) 1px, transparent 1px);
+  background-size: 80px 80px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 10%, transparent 85%);
+}
+.gallery-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+.gallery-breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  margin-bottom: 28px;
+  transition: color 0.3s;
+  opacity: 0;
+  animation: fadeUp 0.6s ease 0.2s forwards;
+}
+.gallery-breadcrumb::before { content: '←'; font-size: 12px; }
+.gallery-breadcrumb:hover { color: var(--accent); }
+.gallery-hero .hero-label {
+  opacity: 0;
+  animation: fadeUp 0.7s ease 0.35s forwards;
+}
+.gallery-hero .hero-title {
+  font-size: clamp(52px, 7vw, 96px);
+  opacity: 0;
+  animation: fadeUp 0.7s ease 0.5s forwards;
+}
+.gallery-hero .hero-sub {
+  opacity: 0;
+  animation: fadeUp 0.7s ease 0.65s forwards;
+}
+
+/* ── Gallery section wrapper ─────────────────────────────────────────────── */
+.gallery-section {
+  background: var(--dark);
+  padding: 80px 60px 120px;
+}
+.gallery-section .portfolio-header {
+  margin-bottom: 56px;
+}
+
+/* ── 9-item asymmetric gallery grid ─────────────────────────────────────── */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+}
+
+/* Layout pattern — varied spans create an editorial magazine feel */
+.gallery-grid .portfolio-item:nth-child(1)  { grid-column: span 7; grid-row: span 2; }
+.gallery-grid .portfolio-item:nth-child(2)  { grid-column: span 5; }
+.gallery-grid .portfolio-item:nth-child(3)  { grid-column: span 5; }
+.gallery-grid .portfolio-item:nth-child(4)  { grid-column: span 4; }
+.gallery-grid .portfolio-item:nth-child(5)  { grid-column: span 4; }
+.gallery-grid .portfolio-item:nth-child(6)  { grid-column: span 4; }
+.gallery-grid .portfolio-item:nth-child(7)  { grid-column: span 6; }
+.gallery-grid .portfolio-item:nth-child(8)  { grid-column: span 6; }
+.gallery-grid .portfolio-item:nth-child(9)  { grid-column: span 12; }
+
+/* Placeholder height overrides for gallery grid items */
+.gallery-grid .portfolio-item:nth-child(1) .portfolio-placeholder { padding-top: 130%; }
+.gallery-grid .portfolio-item:nth-child(9) .portfolio-placeholder { padding-top: 42%; }
+
+/* Unique gradient tones per gallery item (shared across all category pages) */
+.gallery-grid .portfolio-item:nth-child(1) .portfolio-placeholder-inner { background: linear-gradient(160deg, var(--dark) 0%, var(--black) 45%, var(--teal) 100%); }
+.gallery-grid .portfolio-item:nth-child(2) .portfolio-placeholder-inner { background: linear-gradient(200deg, rgba(var(--gold-rgb),0.18) 0%, var(--dark) 60%, var(--black) 100%); }
+.gallery-grid .portfolio-item:nth-child(3) .portfolio-placeholder-inner { background: linear-gradient(120deg, var(--teal) 0%, var(--black) 100%); }
+.gallery-grid .portfolio-item:nth-child(4) .portfolio-placeholder-inner { background: linear-gradient(180deg, var(--dark) 0%, var(--teal) 100%); }
+.gallery-grid .portfolio-item:nth-child(5) .portfolio-placeholder-inner { background: linear-gradient(220deg, var(--black) 0%, rgba(var(--gold-rgb),0.22) 100%); }
+.gallery-grid .portfolio-item:nth-child(6) .portfolio-placeholder-inner { background: linear-gradient(160deg, var(--teal) 0%, var(--dark) 100%); }
+.gallery-grid .portfolio-item:nth-child(7) .portfolio-placeholder-inner { background: linear-gradient(140deg, var(--dark) 0%, var(--black) 50%, rgba(var(--gold-rgb),0.14) 100%); }
+.gallery-grid .portfolio-item:nth-child(8) .portfolio-placeholder-inner { background: linear-gradient(200deg, var(--black) 0%, var(--teal) 100%); }
+.gallery-grid .portfolio-item:nth-child(9) .portfolio-placeholder-inner { background: linear-gradient(160deg, var(--dark) 0%, var(--black) 50%, var(--teal) 100%); }
+
+/* ── filter-btn as <a> tag ────────────────────────────────────────────────── */
+.filter-btn {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
    RESPONSIVE BREAKPOINTS
    ═══════════════════════════════════════════════════════════════════════════════ */
 
@@ -591,6 +703,9 @@ footer {
 
   .portfolio-item:nth-child(1) { grid-column: span 7; }
   .portfolio-item:nth-child(5) { grid-column: span 8; }
+
+  .gallery-hero { padding: 0 40px 56px; }
+  .gallery-section { padding: 64px 40px 100px; }
 }
 
 /* ── SMALL TABLET / LARGE MOBILE (≤ 900px) ─────────────────────────────────── */
@@ -624,6 +739,21 @@ footer {
   .portfolio-overlay { opacity: 1; }
   .portfolio-overlay-title,
   .portfolio-overlay-cat { transform: translateY(0); }
+
+  .gallery-hero { padding: 0 28px 48px; min-height: 44vh; }
+  .gallery-section { padding: 56px 28px 80px; }
+
+  /* Gallery grid collapses to pairs then singles */
+  .gallery-grid .portfolio-item:nth-child(1) { grid-column: span 12; grid-row: span 1; }
+  .gallery-grid .portfolio-item:nth-child(2),
+  .gallery-grid .portfolio-item:nth-child(3) { grid-column: span 6; }
+  .gallery-grid .portfolio-item:nth-child(4),
+  .gallery-grid .portfolio-item:nth-child(5),
+  .gallery-grid .portfolio-item:nth-child(6) { grid-column: span 4; }
+  .gallery-grid .portfolio-item:nth-child(7),
+  .gallery-grid .portfolio-item:nth-child(8) { grid-column: span 6; }
+  .gallery-grid .portfolio-item:nth-child(9) { grid-column: span 12; }
+  .gallery-grid .portfolio-item:nth-child(1) .portfolio-placeholder { padding-top: 65%; }
 
   footer { flex-direction: column; align-items: flex-start; gap: 20px; }
   .form-row { grid-template-columns: 1fr; }
@@ -673,6 +803,21 @@ footer {
 
   .contact-intro { font-size: 17px; }
   .form-submit { width: 100%; text-align: center; padding: 16px; }
+
+  .gallery-hero { padding: 0 20px 40px; padding-top: 90px; min-height: 38vh; }
+  .gallery-section { padding: 48px 20px 64px; }
+
+  .gallery-grid .portfolio-item:nth-child(1),
+  .gallery-grid .portfolio-item:nth-child(2),
+  .gallery-grid .portfolio-item:nth-child(3),
+  .gallery-grid .portfolio-item:nth-child(4),
+  .gallery-grid .portfolio-item:nth-child(5),
+  .gallery-grid .portfolio-item:nth-child(6),
+  .gallery-grid .portfolio-item:nth-child(7),
+  .gallery-grid .portfolio-item:nth-child(8),
+  .gallery-grid .portfolio-item:nth-child(9) { grid-column: span 12; }
+  .gallery-grid .portfolio-item:nth-child(1) .portfolio-placeholder,
+  .gallery-grid .portfolio-item:nth-child(9) .portfolio-placeholder { padding-top: 65%; }
 
   footer { padding: 28px 20px; }
   .footer-social { gap: 18px; }

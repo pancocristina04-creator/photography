@@ -478,7 +478,7 @@ section { padding: 120px 60px; }
   border-color: var(--teal);
 }
 .form-input::placeholder, .form-textarea::placeholder { color: var(--muted); }
-.form-select option { background: var(--dark); }
+.form-select option { background: var(--dark); color: var(--warm);}
 .form-textarea { resize: vertical; min-height: 140px; }
 .form-submit {
   align-self: flex-start;
@@ -568,3 +568,4 @@ footer {
   .form-row { grid-template-columns: 1fr; }
   .hero-film-strip { display: none; }
 }
+

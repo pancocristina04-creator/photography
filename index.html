@@ -25,23 +25,44 @@
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
 
-  <!-- HERO CAROUSEL replacing the old film strip -->
-  <div class="hero-carousel" aria-hidden="true">
-    <div class="hero-carousel-track" id="heroCarouselTrack">
-      <div class="hero-carousel-slide">
-        <img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_1400/v1774457410/RAW_3382_q44t5k.jpg" alt="Paul Bina Photography" />
-      </div>
-      <div class="hero-carousel-slide">
-        <img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_1400/v1774457410/RAW_3396_hixtft.jpg" alt="Paul Bina Photography" />
-      </div>
-      <div class="hero-carousel-slide">
-        <img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_1400/v1774457410/RAW_3392_tyxkxi.jpg" alt="Paul Bina Photography" />
-      </div>
+  <!-- FILM STRIP — 12 frames (3 photos × 4 for seamless infinite scroll) -->
+  <div class="hero-film-strip" aria-hidden="true">
+    <div class="film-frame">
+      <img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_800/v1774457410/RAW_3382_q44t5k.jpg" alt="" />
     </div>
-    <div class="hero-carousel-dots" id="heroCarouselDots">
-      <span class="hero-dot active"></span>
-      <span class="hero-dot"></span>
-      <span class="hero-dot"></span>
+    <div class="film-frame">
+      <img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_800/v1774457410/RAW_3396_hixtft.jpg" alt="" />
+    </div>
+    <div class="film-frame">
+      <img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_800/v1774457410/RAW_3392_tyxkxi.jpg" alt="" />
+    </div>
+    <div class="film-frame">
+      <img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_800/v1774457410/RAW_3382_q44t5k.jpg" alt="" />
+    </div>
+    <div class="film-frame">
+      <img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_800/v1774457410/RAW_3396_hixtft.jpg" alt="" />
+    </div>
+    <div class="film-frame">
+      <img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_800/v1774457410/RAW_3392_tyxkxi.jpg" alt="" />
+    </div>
+    <!-- Duplicates for seamless loop -->
+    <div class="film-frame">
+      <img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_800/v1774457410/RAW_3382_q44t5k.jpg" alt="" />
+    </div>
+    <div class="film-frame">
+      <img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_800/v1774457410/RAW_3396_hixtft.jpg" alt="" />
+    </div>
+    <div class="film-frame">
+      <img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_800/v1774457410/RAW_3392_tyxkxi.jpg" alt="" />
+    </div>
+    <div class="film-frame">
+      <img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_800/v1774457410/RAW_3382_q44t5k.jpg" alt="" />
+    </div>
+    <div class="film-frame">
+      <img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_800/v1774457410/RAW_3396_hixtft.jpg" alt="" />
+    </div>
+    <div class="film-frame">
+      <img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_800/v1774457410/RAW_3392_tyxkxi.jpg" alt="" />
     </div>
   </div>
 
@@ -71,7 +92,14 @@
     <h2 class="section-title">Selected <em>Photography</em></h2>
   </div>
 
-  <!-- PORTRAIT GRID — 10 placeholders -->
+  <div class="portfolio-filters reveal">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="portrait">Portrait</button>
+    <button class="filter-btn" data-filter="landscape">Landscape</button>
+    <button class="filter-btn" data-filter="editorial">Editorial</button>
+  </div>
+
+  <!-- PORTRAIT GRID — 10 items -->
   <div class="portrait-grid reveal">
     <div class="portrait-item portrait-item--tall"><div class="portrait-placeholder"></div></div>
     <div class="portrait-item"><div class="portrait-placeholder"></div></div>
@@ -89,8 +117,6 @@
 <!-- ABOUT -->
 <section class="about" id="about">
   <div class="about-layout">
-
-    <!-- LEFT: photo -->
     <div class="about-visual reveal">
       <div class="about-photo-frame">
         <div class="about-photo-inner">
@@ -99,8 +125,6 @@
       </div>
       <div class="about-accent-line"></div>
     </div>
-
-    <!-- RIGHT: text + stats -->
     <div class="about-content reveal">
       <p class="section-label">About</p>
       <h2 class="section-title">The eye behind<br><em>the lens</em></h2>
@@ -110,7 +134,6 @@
       <p class="about-bio">
         Specialising in portrait, landscape, and editorial photography — available for commissioned work worldwide.
       </p>
-
       <div class="about-stats-grid">
         <div class="about-stat">
           <span class="about-stat-number">8+</span>
@@ -130,7 +153,6 @@
         </div>
       </div>
     </div>
-
   </div>
 </section>
 

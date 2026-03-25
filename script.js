@@ -82,3 +82,20 @@ function handleSubmit(e) {
     e.target.reset();
   }, 3000);
 }
+
+
+// Carousel
+const track = document.getElementById('carouselTrack');
+const dots = document.querySelectorAll('.dot');
+let current = 0;
+const total = 3;
+
+function goTo(n) {
+  current = (n + total) % total;
+  track.style.transform = `translateX(-${current * 100}%)`;
+  dots.forEach((d, i) => d.classList.toggle('active', i === current));
+}
+
+document.getElementById('prevBtn').addEventListener('click', () => goTo(current - 1));
+document.getElementById('nextBtn').addEventListener('click', () => goTo(current + 1));
+dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));

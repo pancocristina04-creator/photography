@@ -24,20 +24,27 @@
 <section class="hero" id="home">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
-  <div class="hero-film-strip" aria-hidden="true">
-    <div class="film-frame"><div class="shape">Landscape</div></div>
-    <div class="film-frame"><div class="shape">Portrait</div></div>
-    <div class="film-frame"><div class="shape">Editorial</div></div>
-    <div class="film-frame"><div class="shape">Commercial</div></div>
-    <div class="film-frame"><div class="shape">Architecture</div></div>
-    <div class="film-frame"><div class="shape">Fashion</div></div>
-    <div class="film-frame"><div class="shape">Landscape</div></div>
-    <div class="film-frame"><div class="shape">Portrait</div></div>
-    <div class="film-frame"><div class="shape">Editorial</div></div>
-    <div class="film-frame"><div class="shape">Commercial</div></div>
-    <div class="film-frame"><div class="shape">Architecture</div></div>
-    <div class="film-frame"><div class="shape">Fashion</div></div>
+
+  <!-- HERO CAROUSEL replacing the old film strip -->
+  <div class="hero-carousel" aria-hidden="true">
+    <div class="hero-carousel-track" id="heroCarouselTrack">
+      <div class="hero-carousel-slide">
+        <img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_1400/v1774457410/RAW_3382_q44t5k.jpg" alt="Paul Bina Photography" />
+      </div>
+      <div class="hero-carousel-slide">
+        <img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_1400/v1774457410/RAW_3396_hixtft.jpg" alt="Paul Bina Photography" />
+      </div>
+      <div class="hero-carousel-slide">
+        <img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_1400/v1774457410/RAW_3392_tyxkxi.jpg" alt="Paul Bina Photography" />
+      </div>
+    </div>
+    <div class="hero-carousel-dots" id="heroCarouselDots">
+      <span class="hero-dot active"></span>
+      <span class="hero-dot"></span>
+      <span class="hero-dot"></span>
+    </div>
   </div>
+
   <div class="hero-content">
     <p class="hero-label">Photography</p>
     <h1 class="hero-title">
@@ -50,6 +57,7 @@
       <a href="#contact" class="btn-secondary">Get in Touch</a>
     </div>
   </div>
+
   <div class="hero-scroll" aria-hidden="true">
     <span>Scroll</span>
     <div class="scroll-line"></div>
@@ -63,51 +71,37 @@
     <h2 class="section-title">Selected <em>Photography</em></h2>
   </div>
 
-  <div class="portfolio-filters reveal">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="portrait">Portrait</button>
-    <button class="filter-btn" data-filter="landscape">Landscape</button>
-    <button class="filter-btn" data-filter="editorial">Editorial</button>
-  </div>
-
-  <!-- PHOTO GRID -->
-  <div class="photo-grid reveal">
-    <div class="photo-item">
-      <img
-        src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_1400/v1774457410/RAW_3382_q44t5k.jpg"
-        alt="Paul Bina Photography"
-        loading="lazy"
-      />
-    </div>
-    <div class="photo-item">
-      <img
-        src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_1400/v1774457410/RAW_3396_hixtft.jpg"
-        alt="Paul Bina Photography"
-        loading="lazy"
-      />
-    </div>
-    <div class="photo-item">
-      <img
-        src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_1400/v1774457410/RAW_3392_tyxkxi.jpg"
-        alt="Paul Bina Photography"
-        loading="lazy"
-      />
-    </div>
+  <!-- PORTRAIT GRID — 10 placeholders -->
+  <div class="portrait-grid reveal">
+    <div class="portrait-item portrait-item--tall"><div class="portrait-placeholder"></div></div>
+    <div class="portrait-item"><div class="portrait-placeholder"></div></div>
+    <div class="portrait-item"><div class="portrait-placeholder"></div></div>
+    <div class="portrait-item portrait-item--wide"><div class="portrait-placeholder"></div></div>
+    <div class="portrait-item"><div class="portrait-placeholder"></div></div>
+    <div class="portrait-item"><div class="portrait-placeholder"></div></div>
+    <div class="portrait-item portrait-item--tall"><div class="portrait-placeholder"></div></div>
+    <div class="portrait-item"><div class="portrait-placeholder"></div></div>
+    <div class="portrait-item"><div class="portrait-placeholder"></div></div>
+    <div class="portrait-item portrait-item--wide"><div class="portrait-placeholder"></div></div>
   </div>
 </section>
 
 <!-- ABOUT -->
 <section class="about" id="about">
-  <div class="about-inner">
+  <div class="about-layout">
+
+    <!-- LEFT: photo -->
     <div class="about-visual reveal">
       <div class="about-photo-frame">
-        <div class="about-photo-placeholder">
-          <span>PB</span>
+        <div class="about-photo-inner">
+          <span class="about-initials">PB</span>
         </div>
       </div>
       <div class="about-accent-line"></div>
     </div>
-    <div class="about-text reveal">
+
+    <!-- RIGHT: text + stats -->
+    <div class="about-content reveal">
       <p class="section-label">About</p>
       <h2 class="section-title">The eye behind<br><em>the lens</em></h2>
       <p class="about-bio">
@@ -116,25 +110,27 @@
       <p class="about-bio">
         Specialising in portrait, landscape, and editorial photography — available for commissioned work worldwide.
       </p>
-      <div class="about-details">
-        <div class="about-detail">
-          <span class="detail-number">8+</span>
-          <span class="detail-label">Years Experience</span>
+
+      <div class="about-stats-grid">
+        <div class="about-stat">
+          <span class="about-stat-number">8+</span>
+          <span class="about-stat-label">Years Experience</span>
         </div>
-        <div class="about-detail">
-          <span class="detail-number">200+</span>
-          <span class="detail-label">Projects Completed</span>
+        <div class="about-stat">
+          <span class="about-stat-number">200+</span>
+          <span class="about-stat-label">Projects Completed</span>
         </div>
-        <div class="about-detail">
-          <span class="detail-number">15+</span>
-          <span class="detail-label">Countries Shot In</span>
+        <div class="about-stat">
+          <span class="about-stat-number">15+</span>
+          <span class="about-stat-label">Countries Shot In</span>
         </div>
-        <div class="about-detail">
-          <span class="detail-number">∞</span>
-          <span class="detail-label">Stories Told</span>
+        <div class="about-stat">
+          <span class="about-stat-number">∞</span>
+          <span class="about-stat-label">Stories Told</span>
         </div>
       </div>
     </div>
+
   </div>
 </section>
 

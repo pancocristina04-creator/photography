@@ -48,13 +48,35 @@ window.addEventListener('resize', () => {
   }, 200);
 }, { passive: true });
 
-// ─── Portfolio filter (visual state only) ───────────────────────────────────
-document.querySelectorAll('.filter-btn').forEach((btn) => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.filter-btn').forEach((b) => b.classList.remove('active'));
-    btn.classList.add('active');
+// ─── Hero carousel (auto-advances, dots clickable) ───────────────────────────
+(function () {
+  const track = document.getElementById('heroCarouselTrack');
+  const dotsContainer = document.getElementById('heroCarouselDots');
+  if (!track || !dotsContainer) return;
+
+  const slides = track.querySelectorAll('.hero-carousel-slide');
+  const dots   = dotsContainer.querySelectorAll('.hero-dot');
+  const total  = slides.length;
+  let current  = 0;
+  let autoTimer;
+
+  function goTo(n) {
+    current = (n + total) % total;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+
+  function startAuto() {
+    clearInterval(autoTimer);
+    autoTimer = setInterval(() => goTo(current + 1), 4500);
+  }
+
+  dots.forEach((d, i) => {
+    d.addEventListener('click', () => { goTo(i); startAuto(); });
   });
-});
+
+  startAuto();
+})();
 
 // ─── Contact form submit (UI feedback only) ──────────────────────────────────
 function handleSubmit(e) {

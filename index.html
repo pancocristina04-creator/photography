@@ -1,269 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>True Tone Portraits — Photography</title>
+<!-- PORTFOLIO -->
+<section class="portfolio" id="portfolio">
+  <div class="section-header">
+    <p class="section-label">Work</p>
+    <h2 class="section-title">Selected <em>Photography</em></h2>
+  </div>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Syne:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
+  <div class="carousel-wrapper">
+    <div class="carousel-track" id="carouselTrack">
 
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-ring" id="cursorRing"></div>
-
-  <!-- NAV -->
-  <nav>
-    <a href="#" class="nav-logo">True Tone <span>Portraits</span></a>
-    <ul class="nav-links">
-      <li><a href="#portfolio">Work</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="hero-bg"></div>
-    <div class="hero-grid"></div>
-
-    <!-- Decorative film strip -->
-    <div class="hero-film-strip" aria-hidden="true">
-      <div class="film-frame"><img src="images/RAW_5945.jpg" alt="Portfolio 1" /></div>
-      <div class="film-frame"><img src="images/RAW_5947-Edit.jpg" alt="Portfolio 2" /></div>
-      <div class="film-frame"><img src="images/RAW_6145.jpg" alt="Portfolio 3" /></div>
-      <div class="film-frame"><img src="images/RAW_6238.jpg" alt="Portfolio 4" /></div>
-      <div class="film-frame"><img src="images/DSC_0227.NEF.jpg" alt="Portfolio 5" /></div>
-      <div class="film-frame"><img src="images/DSC_6802.jpg" alt="Portfolio 6" /></div>
-      <!-- Duplicate for seamless loop -->
-      <div class="film-frame"><img src="images/RAW_5945.jpg" alt="Portfolio 1" /></div>
-      <div class="film-frame"><img src="images/RAW_5947-Edit.jpg" alt="Portfolio 2" /></div>
-      <div class="film-frame"><img src="images/RAW_6145.jpg" alt="Portfolio 3" /></div>
-      <div class="film-frame"><img src="images/RAW_6238.jpg" alt="Portfolio 4" /></div>
-      <div class="film-frame"><img src="images/DSC_0227.NEF.jpg" alt="Portfolio 5" /></div>
-      <div class="film-frame"><img src="images/DSC_6802.jpg" alt="Portfolio 6" /></div>
-    </div>
-
-    <div class="hero-content">
-      <p class="hero-label">Photography</p>
-      <h1 class="hero-title">
-        Moments that<br>
-        <em>speak volumes</em>
-      </h1>
-      <p class="hero-sub">Capturing stories through the lens. Based in Lugoj, Timis, available worldwide for editorial, commercial, and documentary photography.</p>
-      <div class="hero-cta">
-        <a href="#portfolio" class="btn-primary">View Work</a>
-        <a href="#contact" class="btn-secondary">Get in touch</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- PORTFOLIO -->
-  <section id="portfolio">
-    <div class="portfolio-header reveal">
-      <div>
-        <p class="section-label">Selected Works</p>
-        <h2 class="section-title">The <em>Portfolio</em></h2>
-      </div>
-      <div class="portfolio-filter">
-        <span class="filter-btn active">All</span>
-        <a href="portrait.html" class="filter-btn">Portrait</a>
-        <a href="landscape.html" class="filter-btn">Landscape</a>
-        <a href="editorial.html" class="filter-btn">Editorial</a>
-      </div>
-    </div>
-
-    <div class="portfolio-grid">
-
-      <!-- Item 1 — was: RAW_5945.jpg.jpg (broken double extension) -->
-      <div class="portfolio-item reveal">
-        <div class="portfolio-placeholder">
-          <img src="images/RAW_6246.jpeg" alt="Golden Hour Sessions" />
-        </div>
-        <div class="portfolio-overlay">
-          <p class="portfolio-overlay-cat">Editorial · Photography</p>
-          <h3 class="portfolio-overlay-title">Golden Hour Sessions</h3>
-        </div>
+      <div class="carousel-slide">
+        <img
+          src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_1200/v1774457410/RAW_3382_q44t5k.jpg"
+          alt="Paul Bina Photography"
+          loading="lazy"
+        />
       </div>
 
-      <!-- Item 2 — was: two placeholders with no overlay -->
-      <div class="portfolio-item reveal">
-        <div class="portfolio-placeholder">
-          <img src="images/DSC_6823.jpg" alt="Quiet Portraits" />
-        </div>
-        <div class="portfolio-overlay">
-          <p class="portfolio-overlay-cat">Portrait · Photography</p>
-          <h3 class="portfolio-overlay-title">Quiet Portraits</h3>
-        </div>
+      <div class="carousel-slide">
+        <img
+          src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_1200/v1774457410/RAW_3396_hixtft.jpg"
+          alt="Paul Bina Photography"
+          loading="lazy"
+        />
       </div>
 
-      <!-- Item 3 — was: placeholder nested inside placeholder -->
-      <div class="portfolio-item reveal">
-        <div class="portfolio-placeholder">
-          <img src="images/DSC_6961.jpg" alt="Brand Campaign" />
-        </div>
-        <div class="portfolio-overlay">
-          <p class="portfolio-overlay-cat">Commercial · Photography</p>
-          <h3 class="portfolio-overlay-title">Brand Campaign</h3>
-        </div>
-      </div>
-
-      <!-- Item 4 — was: placeholder nested inside placeholder -->
-      <div class="portfolio-item reveal">
-        <div class="portfolio-placeholder">
-          <img src="images/RAW_6422.jpg" alt="Urban Stories" />
-        </div>
-        <div class="portfolio-overlay">
-          <p class="portfolio-overlay-cat">Documentary · Photography</p>
-          <h3 class="portfolio-overlay-title">Urban Stories</h3>
-        </div>
-      </div>
-
-      <!-- Item 5 — was: placeholder nested inside placeholder -->
-      <div class="portfolio-item reveal">
-        <div class="portfolio-placeholder">
-          <img src="images/RAW_5913.jpeg" alt="Autumn Collection" />
-        </div>
-        <div class="portfolio-overlay">
-          <p class="portfolio-overlay-cat">Fashion · Editorial</p>
-          <h3 class="portfolio-overlay-title">Autumn Collection</h3>
-        </div>
-      </div>
-
-      <!-- Item 6 — was: unclosed tags and broken nesting -->
-      <div class="portfolio-item reveal">
-        <div class="portfolio-placeholder">
-          <img src="images/RAW_5841.jpeg" alt="Desert Light" />
-        </div>
-        <div class="portfolio-overlay">
-          <p class="portfolio-overlay-cat">Landscape · Photography</p>
-          <h3 class="portfolio-overlay-title">Desert Light</h3>
-        </div>
+      <div class="carousel-slide">
+        <img
+          src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_1200/v1774457410/RAW_3392_tyxkxi.jpg"
+          alt="Paul Bina Photography"
+          loading="lazy"
+        />
       </div>
 
     </div>
-  </section>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="about-visual reveal">
-      <div class="about-photo-frame">
-        <img src="images/DSC_0213-Enhanced-NR.jpg" alt="Your Name" />
-      </div>
-      <div class="about-accent-line"></div>
-      <div class="about-accent-square"></div>
+    <button class="carousel-btn prev" id="prevBtn" aria-label="Previous">&#8592;</button>
+    <button class="carousel-btn next" id="nextBtn" aria-label="Next">&#8594;</button>
+
+    <div class="carousel-dots" id="carouselDots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
     </div>
-
-    <div class="about-content reveal">
-      <p class="section-label">About Me</p>
-      <h2 class="section-title">A <em>visual</em> storyteller</h2>
-      <p class="about-bio">
-        I believe every frame holds a universe. With over a decade behind the lens,
-        I've learned that the most <em>powerful images</em> aren't captured, they're
-        felt. From intimate portraits to sweeping landscapes, my work
-        explores the quiet tension between light and shadow.
-      </p>
-
-      <div class="about-stats">
-        <div>
-          <div class="stat-number">5+</div>
-          <div class="stat-label">Years of experience</div>
-        </div>
-        <div>
-          <div class="stat-number">100+</div>
-          <div class="stat-label">Projects completed</div>
-        </div>
-        <div>
-          <div class="stat-number">10+</div>
-          <div class="stat-label">Countries visited</div>
-        </div>
-      </div>
-
-      <div class="about-details">
-        <div>
-          <p class="about-detail-label">Based in</p>
-          <p class="about-detail-value">Lugoj, Timis</p>
-        </div>
-        <div>
-          <p class="about-detail-label">Available for</p>
-          <p class="about-detail-value">Europe wide projects</p>
-        </div>
-        <div>
-          <p class="about-detail-label">Specialties</p>
-          <p class="about-detail-value">Commercial</p>
-        </div>
-        <div>
-          <p class="about-detail-label">Equipment</p>
-          <p class="about-detail-value">Nikon & Godox systems</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="contact-inner">
-      <div class="reveal">
-        <p class="section-label">Let's Create Together</p>
-        <h2 class="section-title">Start a <em>conversation</em></h2>
-        <p class="contact-intro">
-          Have a project in mind? I'd love to hear about it. Reach out and let's
-          talk about how we can create something extraordinary together.
-        </p>
-      </div>
-
-      <form class="contact-form reveal" name="contact" netlify onsubmit="handleSubmit(event)">
-        <input type="hidden" name="form-name" value="contact" />
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label">First Name</label>
-            <input type="text" name="first-name" class="form-input" placeholder="Jane" required />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Last Name</label>
-            <input type="text" name="last-name" class="form-input" placeholder="Doe" required />
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label">Email</label>
-            <input type="email" name="email" class="form-input" placeholder="jane@example.com" required />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Project Type</label>
-            <select name="project-type" class="form-select form-input">
-              <option value="">Select a type...</option>
-              <option>Editorial Photography</option>
-              <option>Portrait Session</option>
-              <option>Brand Campaign</option>
-              <option>Boudoir Session</option>
-              <option>Wedding / Event</option>
-              <option>Other</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="form-label">Tell me about your project</label>
-          <textarea name="message" class="form-textarea" placeholder="Describe your vision, timeline, and budget..." required></textarea>
-        </div>
-        <button type="submit" class="form-submit">Send Message</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-logo">True Tone <span>Portraits</span></div>
-    <p class="footer-copy">© 2026 True Tone Portraits. All rights reserved.</p>
-    <div class="footer-social">
-      <a href="#">Instagram</a>
-      <a href="#">Behance</a>
-      <a href="#">LinkedIn</a>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+  </div>
+</section>

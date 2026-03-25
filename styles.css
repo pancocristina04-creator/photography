@@ -31,17 +31,11 @@
   --muted: var(--sage);
   --white: var(--gold);
 
-  /* Nav height – used for scroll-margin-top and JS observer offset.
-     Update this value in every breakpoint that changes nav padding.    */
   --nav-h: 88px;
 }
 
 html { scroll-behavior: smooth; }
 
-/* ─── WINDOWS STANDARD CURSOR (BLACK) ─────────────────────────────────────── */
-/*  Hotspot = 0,0 (the tip of the arrow).                                       */
-/*  The path replicates the classic Windows arrow: left-edge vertical,          */
-/*  diagonal bottom-right edge, and the inner notch that forms the "tail".      */
 body {
   background: var(--black);
   color: var(--cream);
@@ -51,7 +45,6 @@ body {
   cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Cpath d='M 0 0 L 0 22 L 6 16.5 L 10.5 26 L 14.5 24.2 L 10 14.5 L 18 14.5 Z' fill='%23000000'/%3E%3Cpath d='M 0 0 L 0 22 L 6 16.5 L 10.5 26 L 14.5 24.2 L 10 14.5 L 18 14.5 Z' fill='none' stroke='%23ffffff' stroke-width='1.2' stroke-linejoin='round'/%3E%3C/svg%3E") 0 0, auto;
 }
 
-/* Custom cursor elements – hidden (using CSS cursor instead) */
 .cursor      { display: none; }
 .cursor-ring { display: none; }
 
@@ -61,12 +54,9 @@ nav {
   z-index: 100;
   padding: 28px 60px;
   display: flex; align-items: center; justify-content: space-between;
-  /* Hero state: gradient fades to transparent at the bottom */
   background: linear-gradient(to bottom, rgba(var(--obsidian-rgb), 0.95) 0%, transparent 100%);
-  /* Smooth transition when switching to/from solid state */
   transition: background 0.35s ease, box-shadow 0.35s ease;
 }
-/* Applied by JS once the hero scrolls out of view */
 nav.nav-scrolled {
   background: rgba(var(--obsidian-rgb), 0.97);
   box-shadow: 0 1px 0 rgba(var(--taupe-rgb), 0.12);
@@ -97,7 +87,7 @@ nav.nav-scrolled {
 
 /* ─── HERO ─────────────────────────────────────────────────────────────────── */
 .hero {
-  height: 100svh; /* svh = safer on mobile (avoids browser-chrome issues) */
+  height: 100svh;
   min-height: 600px;
   position: relative;
   display: flex; align-items: flex-end;
@@ -234,8 +224,6 @@ nav.nav-scrolled {
 
 /* ─── SECTION COMMON ───────────────────────────────────────────────────────── */
 section { padding: 120px 60px; }
-/* Anchor-link offset: prevents the fixed nav from covering section headings
-   when the user clicks a nav link or the browser jumps to an id.           */
 section[id] { scroll-margin-top: var(--nav-h); }
 .section-label {
   font-size: 10px;
@@ -253,13 +241,14 @@ section[id] { scroll-margin-top: var(--nav-h); }
 .section-title em { font-style: italic; color: var(--accent-light); }
 
 /* ─── PORTFOLIO ─────────────────────────────────────────────────────────────── */
+.portfolio { padding: 120px 60px; }
 #portfolio { background: var(--dark); }
-.portfolio-header {
-  display: flex; align-items: flex-end; justify-content: space-between;
-  flex-wrap: wrap; gap: 24px;
-  margin-bottom: 64px;
+
+.portfolio-filters {
+  display: flex; gap: 8px; flex-wrap: wrap;
+  margin-top: 40px;
+  margin-bottom: 48px;
 }
-.portfolio-filter { display: flex; gap: 8px; flex-wrap: wrap; }
 .filter-btn {
   background: none;
   border: 1px solid rgba(var(--taupe-rgb), 0.35);
@@ -271,6 +260,9 @@ section[id] { scroll-margin-top: var(--nav-h); }
   padding: 8px 20px;
   cursor: pointer;
   transition: all 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
 }
 .filter-btn.active, .filter-btn:hover {
   border-color: var(--accent);
@@ -278,82 +270,28 @@ section[id] { scroll-margin-top: var(--nav-h); }
   background: rgba(var(--teal-rgb), 0.12);
 }
 
-.portfolio-grid {
+/* ─── PHOTO GRID ────────────────────────────────────────────────────────────── */
+.photo-grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
-.portfolio-item {
-  position: relative;
+.photo-item {
   overflow: hidden;
-  background: var(--warm);
-  cursor: pointer;
-}
-.portfolio-item:nth-child(1) { grid-column: span 7; grid-row: span 2; }
-.portfolio-item:nth-child(2) { grid-column: span 5; }
-.portfolio-item:nth-child(3) { grid-column: span 5; }
-.portfolio-item:nth-child(4) { grid-column: span 4; }
-.portfolio-item:nth-child(5) { grid-column: span 8; }
-.portfolio-item:nth-child(6) { grid-column: span 4; }
-
-.portfolio-placeholder {
-  width: 100%; padding-top: 65%;
   position: relative;
-  display: flex; align-items: center; justify-content: center;
 }
-.portfolio-item:nth-child(1) .portfolio-placeholder { padding-top: 130%; }
-.portfolio-placeholder-inner {
-  position: absolute; inset: 0;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  gap: 12px;
+.photo-item img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
 }
-.portfolio-item:nth-child(1) .portfolio-placeholder-inner { background: linear-gradient(160deg, var(--dark) 0%, var(--black) 50%, var(--teal) 100%); }
-.portfolio-item:nth-child(2) .portfolio-placeholder-inner { background: linear-gradient(200deg, var(--dark) 0%, var(--black) 100%); }
-.portfolio-item:nth-child(3) .portfolio-placeholder-inner { background: linear-gradient(120deg, var(--teal) 0%, var(--black) 100%); }
-.portfolio-item:nth-child(4) .portfolio-placeholder-inner { background: linear-gradient(180deg, var(--dark) 0%, var(--teal) 100%); }
-.portfolio-item:nth-child(5) .portfolio-placeholder-inner { background: linear-gradient(140deg, var(--black) 0%, var(--dark) 100%); }
-.portfolio-item:nth-child(6) .portfolio-placeholder-inner { background: linear-gradient(160deg, var(--teal) 0%, var(--dark) 100%); }
-
-.placeholder-icon {
-  width: 40px; height: 40px;
-  border: 1px solid rgba(var(--taupe-rgb), 0.35);
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  color: rgba(var(--gold-rgb), 0.55);
-  font-size: 16px;
+.photo-item:hover img {
+  transform: scale(1.03);
 }
-.placeholder-text {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 11px;
-  letter-spacing: 0.15em;
-  color: rgba(var(--sandstone-rgb), 0.45);
-}
-.portfolio-overlay {
-  position: absolute; inset: 0;
-  background: linear-gradient(to top, rgba(var(--obsidian-rgb), 0.95) 0%, rgba(var(--obsidian-rgb), 0.2) 50%, transparent 100%);
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  display: flex; flex-direction: column; justify-content: flex-end;
-  padding: 28px;
-}
-.portfolio-item:hover .portfolio-overlay { opacity: 1; }
-.portfolio-overlay-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 22px;
-  font-weight: 300;
-  transform: translateY(10px);
-  transition: transform 0.4s ease;
-}
-.portfolio-item:hover .portfolio-overlay-title { transform: translateY(0); }
-.portfolio-overlay-cat {
-  font-size: 10px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--accent);
-  transform: translateY(10px);
-  transition: transform 0.4s ease 0.05s;
-}
-.portfolio-item:hover .portfolio-overlay-cat { transform: translateY(0); }
 
 /* ─── ABOUT ─────────────────────────────────────────────────────────────────── */
 #about {
@@ -579,7 +517,6 @@ footer {
    GALLERY CATEGORY PAGES  (portrait.html / landscape.html / editorial.html)
    ═══════════════════════════════════════════════════════════════════════════════ */
 
-/* ── Compact hero banner ──────────────────────────────────────────────────── */
 .gallery-hero {
   min-height: 68vh;
   position: relative;
@@ -638,7 +575,6 @@ footer {
   animation: fadeUp 0.7s ease 0.65s forwards;
 }
 
-/* ── Gallery section wrapper ─────────────────────────────────────────────── */
 .gallery-section {
   background: var(--dark);
   padding: 80px 60px 120px;
@@ -647,14 +583,12 @@ footer {
   margin-bottom: 56px;
 }
 
-/* ── 9-item asymmetric gallery grid ─────────────────────────────────────── */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 16px;
 }
 
-/* Layout pattern — varied spans create an editorial magazine feel */
 .gallery-grid .portfolio-item:nth-child(1)  { grid-column: span 7; grid-row: span 2; }
 .gallery-grid .portfolio-item:nth-child(2)  { grid-column: span 5; }
 .gallery-grid .portfolio-item:nth-child(3)  { grid-column: span 5; }
@@ -665,11 +599,9 @@ footer {
 .gallery-grid .portfolio-item:nth-child(8)  { grid-column: span 6; }
 .gallery-grid .portfolio-item:nth-child(9)  { grid-column: span 12; }
 
-/* Placeholder height overrides for gallery grid items */
 .gallery-grid .portfolio-item:nth-child(1) .portfolio-placeholder { padding-top: 130%; }
 .gallery-grid .portfolio-item:nth-child(9) .portfolio-placeholder { padding-top: 42%; }
 
-/* Unique gradient tones per gallery item (shared across all category pages) */
 .gallery-grid .portfolio-item:nth-child(1) .portfolio-placeholder-inner { background: linear-gradient(160deg, var(--dark) 0%, var(--black) 45%, var(--teal) 100%); }
 .gallery-grid .portfolio-item:nth-child(2) .portfolio-placeholder-inner { background: linear-gradient(200deg, rgba(var(--gold-rgb),0.18) 0%, var(--dark) 60%, var(--black) 100%); }
 .gallery-grid .portfolio-item:nth-child(3) .portfolio-placeholder-inner { background: linear-gradient(120deg, var(--teal) 0%, var(--black) 100%); }
@@ -680,35 +612,24 @@ footer {
 .gallery-grid .portfolio-item:nth-child(8) .portfolio-placeholder-inner { background: linear-gradient(200deg, var(--black) 0%, var(--teal) 100%); }
 .gallery-grid .portfolio-item:nth-child(9) .portfolio-placeholder-inner { background: linear-gradient(160deg, var(--dark) 0%, var(--black) 50%, var(--teal) 100%); }
 
-/* ── filter-btn as <a> tag ────────────────────────────────────────────────── */
-.filter-btn {
-  display: inline-block;
-  text-decoration: none;
-  text-align: center;
-}
-
 /* ═══════════════════════════════════════════════════════════════════════════════
    RESPONSIVE BREAKPOINTS
    ═══════════════════════════════════════════════════════════════════════════════ */
 
-/* ── TABLET (≤ 1024px) ───────────────────────────────────────────────────────── */
 @media (max-width: 1024px) {
   :root { --nav-h: 76px; }
   nav { padding: 22px 40px; }
   .hero { padding: 0 40px 70px; }
   section { padding: 100px 40px; }
   footer { padding: 40px; }
+  .portfolio { padding: 100px 40px; }
 
   #about { gap: 60px; }
-
-  .portfolio-item:nth-child(1) { grid-column: span 7; }
-  .portfolio-item:nth-child(5) { grid-column: span 8; }
 
   .gallery-hero { padding: calc(var(--nav-h) + 32px) 40px 72px; }
   .gallery-section { padding: 64px 40px 100px; }
 }
 
-/* ── SMALL TABLET / LARGE MOBILE (≤ 900px) ─────────────────────────────────── */
 @media (max-width: 900px) {
   :root { --nav-h: 68px; }
   nav { padding: 18px 28px; }
@@ -718,6 +639,7 @@ footer {
   .hero-film-strip { display: none; }
   section { padding: 80px 28px; }
   footer  { padding: 36px 28px; }
+  .portfolio { padding: 80px 28px; }
 
   #about {
     grid-template-columns: 1fr;
@@ -727,23 +649,14 @@ footer {
   .about-accent-line  { display: none; }
   .about-accent-square { left: 0; bottom: -12px; }
 
-  /* Portfolio: big item full-width, others in pairs */
-  .portfolio-item:nth-child(1) { grid-column: span 12; grid-row: span 1; }
-  .portfolio-item:nth-child(2),
-  .portfolio-item:nth-child(3) { grid-column: span 6; }
-  .portfolio-item:nth-child(4),
-  .portfolio-item:nth-child(5),
-  .portfolio-item:nth-child(6) { grid-column: span 12; }
-
-  /* Show overlay always on touch devices */
-  .portfolio-overlay { opacity: 1; }
-  .portfolio-overlay-title,
-  .portfolio-overlay-cat { transform: translateY(0); }
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+  .photo-item img { height: 400px; }
 
   .gallery-hero { padding: calc(var(--nav-h) + 28px) 28px 60px; min-height: 58vh; }
   .gallery-section { padding: 56px 28px 80px; }
 
-  /* Gallery grid collapses to pairs then singles */
   .gallery-grid .portfolio-item:nth-child(1) { grid-column: span 12; grid-row: span 1; }
   .gallery-grid .portfolio-item:nth-child(2),
   .gallery-grid .portfolio-item:nth-child(3) { grid-column: span 6; }
@@ -759,7 +672,6 @@ footer {
   .form-row { grid-template-columns: 1fr; }
 }
 
-/* ── MOBILE (≤ 600px) ────────────────────────────────────────────────────────── */
 @media (max-width: 600px) {
   :root { --nav-h: 60px; }
   nav {
@@ -772,8 +684,8 @@ footer {
 
   .hero {
     padding: 0 20px 52px;
-    align-items: center;        /* vertically centre content on small phones */
-    padding-top: 100px;         /* clear the fixed nav */
+    align-items: center;
+    padding-top: 100px;
   }
   .hero-title  { font-size: clamp(42px, 12vw, 72px); }
   .hero-sub    { font-size: 12px; max-width: 100%; }
@@ -781,19 +693,10 @@ footer {
   .btn-primary { padding: 12px 28px; }
 
   section { padding: 64px 20px; }
+  .portfolio { padding: 64px 20px; }
 
-  /* Portfolio: single column on small phones */
-  .portfolio-item:nth-child(1),
-  .portfolio-item:nth-child(2),
-  .portfolio-item:nth-child(3),
-  .portfolio-item:nth-child(4),
-  .portfolio-item:nth-child(5),
-  .portfolio-item:nth-child(6) { grid-column: span 12; }
-
-  .portfolio-item:nth-child(1) .portfolio-placeholder { padding-top: 75%; }
-  .portfolio-header { flex-direction: column; align-items: flex-start; }
-  .portfolio-filter { gap: 6px; }
-  .filter-btn { padding: 6px 14px; font-size: 9px; }
+  .photo-grid { grid-template-columns: 1fr; }
+  .photo-item img { height: 300px; }
 
   #about { gap: 36px; }
   .about-photo-frame { padding-top: 100%; }
@@ -823,50 +726,14 @@ footer {
   .footer-social { gap: 18px; }
 }
 
-/* ── VERY SMALL (≤ 380px) ────────────────────────────────────────────────────── */
 @media (max-width: 380px) {
   .nav-links a { letter-spacing: 0.08em; }
   .hero-title  { font-size: 38px; }
   .nav-links   { gap: 12px; }
 }
 
-/* Touch / coarse-pointer: always show portfolio overlay captions */
 @media (hover: none) {
   .portfolio-overlay            { opacity: 1; }
   .portfolio-overlay-title,
   .portfolio-overlay-cat        { transform: translateY(0); }
 }
-
-
-/* CAROUSEL */
-.portfolio { padding: 120px 60px; }
-.carousel-wrapper { position: relative; max-width: 1100px; margin: 60px auto 0; }
-.carousel-track {
-  display: flex;
-  transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-  overflow: hidden;
-  border-radius: 4px;
-}
-.carousel-slide { min-width: 100%; }
-.carousel-slide img {
-  width: 100%; height: 70vh;
-  object-fit: cover;
-  display: block;
-}
-.carousel-btn {
-  position: absolute; top: 50%; transform: translateY(-50%);
-  background: rgba(13,13,13,0.7); border: 1px solid rgba(255,255,255,0.15);
-  color: var(--cream); font-size: 20px;
-  width: 48px; height: 48px; border-radius: 50%;
-  cursor: none; display: flex; align-items: center; justify-content: center;
-  transition: background 0.3s;
-}
-.carousel-btn:hover { background: var(--accent); border-color: var(--accent); }
-.carousel-btn.prev { left: -24px; }
-.carousel-btn.next { right: -24px; }
-.carousel-dots { display: flex; justify-content: center; gap: 8px; margin-top: 24px; }
-.dot {
-  width: 6px; height: 6px; border-radius: 50%;
-  background: var(--muted); transition: background 0.3s, transform 0.3s;
-}
-.dot.active { background: var(--accent); transform: scale(1.4); }

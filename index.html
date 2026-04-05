@@ -1,10 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Paul Bina — Photography</title>
+
+<!-- SEO: Title tag -->
+<title>Paul Bina | Fotograf Portret, Peisaj & Editorial</title>
+
+<!-- SEO: Meta description -->
+<meta name="description" content="Paul Bina, fotograf cu ochi pentru detaliul care face diferența. Portret, peisaj, editorial. 8+ ani de experiență, 200+ proiecte, 15+ țări. Scrie-mi." />
+
+<!-- SEO: Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Paul Bina | Fotograf Portret, Peisaj & Editorial" />
+<meta property="og:description" content="Fotograf cu ochi pentru detaliul care face diferența. Portret, peisaj, editorial. 8+ ani, 200+ proiecte, 15+ țări." />
+<meta property="og:url" content="https://pancocristina04-creator.github.io/photography/" />
+<meta property="og:image" content="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_1200/v1774457410/RAW_3382_q44t5k.jpg" />
+<meta property="og:locale" content="ro_RO" />
+<meta property="og:locale:alternate" content="en_US" />
+
+<!-- SEO: Hreflang -->
+<link rel="alternate" hreflang="ro" href="https://pancocristina04-creator.github.io/photography/" />
+<link rel="alternate" hreflang="en" href="https://pancocristina04-creator.github.io/photography/?lang=en" />
+<link rel="alternate" hreflang="x-default" href="https://pancocristina04-creator.github.io/photography/" />
+
+<!-- SEO: Canonical -->
+<link rel="canonical" href="https://pancocristina04-creator.github.io/photography/" />
+
+<!-- SEO: Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Paul Bina Photography",
+  "description": "Fotograf specializat în portret, peisaj și fotografie editorială.",
+  "url": "https://pancocristina04-creator.github.io/photography/",
+  "image": "https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_1200/v1774457410/RAW_3382_q44t5k.jpg",
+  "email": "hello@paulbina.com",
+  "sameAs": [
+    "https://instagram.com/paulbina",
+    "https://behance.net/paulbina",
+    "https://linkedin.com/in/paulbina"
+  ],
+  "knowsAbout": ["Portrait Photography", "Landscape Photography", "Editorial Photography", "Commercial Photography"],
+  "areaServed": "Worldwide"
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Syne:wght@400;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
 </head>
@@ -14,9 +58,14 @@
 <nav>
   <a href="#" class="nav-logo">Paul <span>Bina</span></a>
   <ul class="nav-links">
-    <li><a href="#portfolio">Work</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#portfolio" data-ro="Portofoliu" data-en="Work">Portofoliu</a></li>
+    <li><a href="#about" data-ro="Despre" data-en="About">Despre</a></li>
+    <li><a href="#contact" data-ro="Scrie-mi" data-en="Contact">Scrie-mi</a></li>
+    <li>
+      <button class="lang-switch" id="langSwitch" aria-label="Switch language" title="Switch language">
+        <span class="lang-flag" id="langFlag">EN</span>
+      </button>
+    </li>
   </ul>
 </nav>
 
@@ -25,131 +74,106 @@
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
 
-  <!-- FILM STRIP — 12 frames (3 photos × 4 for seamless infinite scroll) -->
-  <div class="hero-film-strip" aria-hidden="true">
-    <div class="film-frame">
-      <img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_800/v1774457410/RAW_3382_q44t5k.jpg" alt="" />
-    </div>
-    <div class="film-frame">
-      <img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_800/v1774457410/RAW_3396_hixtft.jpg" alt="" />
-    </div>
-    <div class="film-frame">
-      <img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_800/v1774457410/RAW_3392_tyxkxi.jpg" alt="" />
-    </div>
-    <div class="film-frame">
-      <img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_800/v1774457410/RAW_3382_q44t5k.jpg" alt="" />
-    </div>
-    <div class="film-frame">
-      <img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_800/v1774457410/RAW_3396_hixtft.jpg" alt="" />
-    </div>
-    <div class="film-frame">
-      <img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_800/v1774457410/RAW_3392_tyxkxi.jpg" alt="" />
-    </div>
-    <!-- Duplicates for seamless loop -->
-    <div class="film-frame">
-      <img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_800/v1774457410/RAW_3382_q44t5k.jpg" alt="" />
-    </div>
-    <div class="film-frame">
-      <img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_800/v1774457410/RAW_3396_hixtft.jpg" alt="" />
-    </div>
-    <div class="film-frame">
-      <img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_800/v1774457410/RAW_3392_tyxkxi.jpg" alt="" />
-    </div>
-    <div class="film-frame">
-      <img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_800/v1774457410/RAW_3382_q44t5k.jpg" alt="" />
-    </div>
-    <div class="film-frame">
-      <img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_800/v1774457410/RAW_3396_hixtft.jpg" alt="" />
-    </div>
-    <div class="film-frame">
-      <img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_800/v1774457410/RAW_3392_tyxkxi.jpg" alt="" />
+  <!-- Hero Film Strip Carousel -->
+  <div class="hero-carousel" aria-hidden="true">
+    <div class="hero-carousel-track" id="heroCarouselTrack">
+      <div class="hero-carousel-slide"><img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_1400/v1774457410/RAW_3382_q44t5k.jpg" alt="Privire" /></div>
+      <div class="hero-carousel-slide"><img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_1400/v1774457410/RAW_3396_hixtft.jpg" alt="Orizont" /></div>
+      <div class="hero-carousel-slide"><img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_1400/v1774457410/RAW_3392_tyxkxi.jpg" alt="Cadru narativ" /></div>
+      <div class="hero-carousel-slide"><img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_1400/v1774457410/RAW_3382_q44t5k.jpg" alt="Fragment" /></div>
+      <div class="hero-carousel-slide"><img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_1400/v1774457410/RAW_3396_hixtft.jpg" alt="Distanță" /></div>
+      <div class="hero-carousel-slide"><img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_1400/v1774457410/RAW_3392_tyxkxi.jpg" alt="Tensiune vizuală" /></div>
+      <div class="hero-carousel-slide"><img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_1400/v1774457410/RAW_3382_q44t5k.jpg" alt="Apropiere" /></div>
+      <div class="hero-carousel-slide"><img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_1400/v1774457410/RAW_3396_hixtft.jpg" alt="Liniște" /></div>
+      <div class="hero-carousel-slide"><img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_1400/v1774457410/RAW_3392_tyxkxi.jpg" alt="Ritm" /></div>
+      <div class="hero-carousel-slide"><img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_1400/v1774457410/RAW_3382_q44t5k.jpg" alt="Gest" /></div>
+      <div class="hero-carousel-slide"><img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_1400/v1774457410/RAW_3396_hixtft.jpg" alt="Adâncime" /></div>
+      <div class="hero-carousel-slide"><img src="https://res.cloudinary.com/dzgw5flig/image/upload/f_auto,q_auto,w_1400/v1774457410/RAW_3392_tyxkxi.jpg" alt="Poveste" /></div>
     </div>
   </div>
 
-  <div class="hero-content">
-    <p class="hero-label">Photography</p>
-    <h1 class="hero-title">
-      Moments that<br>
-      <em>speak volumes</em>
-    </h1>
-    <p class="hero-sub">Capturing stories through the lens.</p>
+  <!-- Scrolling marquee -->
+  <div class="hero-marquee" aria-hidden="true">
+    <div class="marquee-inner">
+      <span data-ro="Peisaj" data-en="Landscape">Peisaj</span>
+      <span data-ro="Portret" data-en="Portrait">Portret</span>
+      <span data-ro="Editorial" data-en="Editorial">Editorial</span>
+      <span data-ro="Comercial" data-en="Commercial">Comercial</span>
+      <span data-ro="Arhitectură" data-en="Architecture">Arhitectură</span>
+      <span data-ro="Modă" data-en="Fashion">Modă</span>
+      <span data-ro="Peisaj" data-en="Landscape">Peisaj</span>
+      <span data-ro="Portret" data-en="Portrait">Portret</span>
+      <span data-ro="Editorial" data-en="Editorial">Editorial</span>
+      <span data-ro="Comercial" data-en="Commercial">Comercial</span>
+      <span data-ro="Arhitectură" data-en="Architecture">Arhitectură</span>
+      <span data-ro="Modă" data-en="Fashion">Modă</span>
+    </div>
+  </div>
+
+  <div class="hero-content reveal">
+    <h1 data-ro="Văd detaliul pe care alții îl trec cu vederea. Și îl transform în imagine." data-en="I catch the detail everyone else walks past. And I turn it into a photograph.">Văd detaliul pe care alții îl trec cu vederea. Și îl transform în imagine.</h1>
+    <p class="hero-sub" data-ro="Fotografie de portret, peisaj și editorial. Fiecare cadru cu un punct de vedere clar." data-en="Portrait, landscape and editorial photography. Every frame with a clear point of view.">Fotografie de portret, peisaj și editorial. Fiecare cadru cu un punct de vedere clar.</p>
     <div class="hero-cta">
-      <a href="#portfolio" class="btn-primary">View Work</a>
-      <a href="#contact" class="btn-secondary">Get in Touch</a>
+      <a href="#portfolio" class="btn btn-primary" data-ro="Vezi portofoliul" data-en="View Portfolio">Vezi portofoliul</a>
+      <a href="#contact" class="btn btn-outline" data-ro="Hai să vorbim" data-en="Let's Talk">Hai să vorbim</a>
     </div>
-  </div>
-
-  <div class="hero-scroll" aria-hidden="true">
-    <span>Scroll</span>
-    <div class="scroll-line"></div>
   </div>
 </section>
 
-<!-- PORTFOLIO -->
+<!-- PORTFOLIO / WORK -->
 <section class="portfolio" id="portfolio">
-  <div class="section-header reveal">
-    <p class="section-label">Work</p>
-    <h2 class="section-title">Selected <em>Photography</em></h2>
+  <h2 class="section-title reveal" data-ro="Lucrări recente" data-en="Recent Work">Lucrări recente</h2>
+  <p class="section-subtitle reveal" data-ro="Câteva proiecte din ultima perioadă. Fiecare cu povestea ei." data-en="A few projects from recent months. Each one with its own story.">Câteva proiecte din ultima perioadă. Fiecare cu povestea ei.</p>
+
+  <div class="filter-bar reveal">
+    <button class="filter-btn active" data-ro="Toate" data-en="All">Toate</button>
+    <button class="filter-btn" data-ro="Portret" data-en="Portrait">Portret</button>
+    <button class="filter-btn" data-ro="Peisaj" data-en="Landscape">Peisaj</button>
+    <button class="filter-btn" data-ro="Editorial" data-en="Editorial">Editorial</button>
   </div>
 
-  <div class="portfolio-filters reveal">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="portrait">Portrait</button>
-    <button class="filter-btn" data-filter="landscape">Landscape</button>
-    <button class="filter-btn" data-filter="editorial">Editorial</button>
-  </div>
-
-  <!-- PORTRAIT GRID — 10 items -->
-  <div class="portrait-grid reveal">
-    <div class="portrait-item portrait-item--tall"><div class="portrait-placeholder"></div></div>
-    <div class="portrait-item"><div class="portrait-placeholder"></div></div>
-    <div class="portrait-item"><div class="portrait-placeholder"></div></div>
-    <div class="portrait-item portrait-item--wide"><div class="portrait-placeholder"></div></div>
-    <div class="portrait-item"><div class="portrait-placeholder"></div></div>
-    <div class="portrait-item"><div class="portrait-placeholder"></div></div>
-    <div class="portrait-item portrait-item--tall"><div class="portrait-placeholder"></div></div>
-    <div class="portrait-item"><div class="portrait-placeholder"></div></div>
-    <div class="portrait-item"><div class="portrait-placeholder"></div></div>
-    <div class="portrait-item portrait-item--wide"><div class="portrait-placeholder"></div></div>
+  <div class="mosaic-grid reveal">
+    <div class="mosaic-item"><div class="mosaic-placeholder p1"></div></div>
+    <div class="mosaic-item"><div class="mosaic-placeholder p2"></div></div>
+    <div class="mosaic-item"><div class="mosaic-placeholder p3"></div></div>
+    <div class="mosaic-item"><div class="mosaic-placeholder p4"></div></div>
+    <div class="mosaic-item"><div class="mosaic-placeholder p5"></div></div>
+    <div class="mosaic-item"><div class="mosaic-placeholder p6"></div></div>
+    <div class="mosaic-item"><div class="mosaic-placeholder p7"></div></div>
+    <div class="mosaic-item"><div class="mosaic-placeholder p8"></div></div>
+    <div class="mosaic-item"><div class="mosaic-placeholder p9"></div></div>
+    <div class="mosaic-item"><div class="mosaic-placeholder p10"></div></div>
   </div>
 </section>
 
 <!-- ABOUT -->
 <section class="about" id="about">
-  <div class="about-layout">
-    <div class="about-visual reveal">
-      <div class="about-photo-frame">
-        <div class="about-photo-inner">
-          <span class="about-initials">PB</span>
-        </div>
-      </div>
-      <div class="about-accent-line"></div>
+  <h2 class="section-title reveal" data-ro="Cine sunt" data-en="About">Cine sunt</h2>
+  <div class="about-layout reveal">
+    <div class="about-photo">
+      <div class="about-photo-placeholder"></div>
     </div>
-    <div class="about-content reveal">
-      <p class="section-label">About</p>
-      <h2 class="section-title">The eye behind<br><em>the lens</em></h2>
-      <p class="about-bio">
-        Paul Bina is a photographer with a passion for capturing authentic moments and compelling visual stories. With an eye for light, composition, and the decisive moment, every image is crafted with intention and care.
-      </p>
-      <p class="about-bio">
-        Specialising in portrait, landscape, and editorial photography — available for commissioned work worldwide.
-      </p>
-      <div class="about-stats-grid">
-        <div class="about-stat">
-          <span class="about-stat-number">8+</span>
-          <span class="about-stat-label">Years Experience</span>
+    <div class="about-text">
+      <p data-ro="Salut, sunt Paul. De peste 8 ani fotografiez oameni, locuri și povești vizuale prin peste 15 țări. Fiecare proiect mă duce undeva nou și asta mă ține curios." data-en="Hey, I'm Paul. For the past 8+ years I've been photographing people, places and visual stories across 15+ countries. Every project takes me somewhere new, and that's what keeps me curious.">Salut, sunt Paul. De peste 8 ani fotografiez oameni, locuri și povești vizuale prin peste 15 țări. Fiecare proiect mă duce undeva nou și asta mă ține curios.</p>
+      <p data-ro="Cel mai tare mă atrage detaliul pe care lumea îl trece cu vederea: o privire de o fracțiune de secundă, un gest care spune tot, textura unui loc la ora potrivită. Ăla e momentul pe care îl caut de fiecare dată." data-en="What draws me in most is the detail people tend to overlook: a split-second glance, a gesture that tells the whole story, the texture of a place at just the right hour. That's the moment I chase every time.">Cel mai tare mă atrage detaliul pe care lumea îl trece cu vederea: o privire de o fracțiune de secundă, un gest care spune tot, textura unui loc la ora potrivită. Ăla e momentul pe care îl caut de fiecare dată.</p>
+      <p data-ro="Lucrez în portret, peisaj și editorial, mereu cu aceeași regulă simplă: dacă poza nu te face să simți ceva, am ratat-o." data-en="I work in portrait, landscape and editorial, always with the same simple rule: if the photo doesn't make you feel something, I missed the shot.">Lucrez în portret, peisaj și editorial, mereu cu aceeași regulă simplă: dacă poza nu te face să simți ceva, am ratat-o.</p>
+
+      <div class="about-stats">
+        <div class="stat-item">
+          <span class="stat-number">8+</span>
+          <span class="stat-label" data-ro="Ani cu aparatul în mână" data-en="Years Behind the Lens">Ani cu aparatul în mână</span>
         </div>
-        <div class="about-stat">
-          <span class="about-stat-number">200+</span>
-          <span class="about-stat-label">Projects Completed</span>
+        <div class="stat-item">
+          <span class="stat-number">200+</span>
+          <span class="stat-label" data-ro="Proiecte livrate" data-en="Projects Delivered">Proiecte livrate</span>
         </div>
-        <div class="about-stat">
-          <span class="about-stat-number">15+</span>
-          <span class="about-stat-label">Countries Shot In</span>
+        <div class="stat-item">
+          <span class="stat-number">15+</span>
+          <span class="stat-label" data-ro="Țări explorate" data-en="Countries Explored">Țări explorate</span>
         </div>
-        <div class="about-stat">
-          <span class="about-stat-number">∞</span>
-          <span class="about-stat-label">Stories Told</span>
+        <div class="stat-item">
+          <span class="stat-number">&infin;</span>
+          <span class="stat-label" data-ro="Detalii observate" data-en="Details Noticed">Detalii observate</span>
         </div>
       </div>
     </div>
@@ -158,56 +182,63 @@
 
 <!-- CONTACT -->
 <section class="contact" id="contact">
-  <div class="contact-inner">
-    <div class="contact-info reveal">
-      <p class="section-label">Contact</p>
-      <h2 class="section-title">Let's create<br><em>something</em></h2>
-      <p class="contact-sub">Available for portrait sessions, editorial commissions, and commercial projects.</p>
-      <div class="contact-links">
-        <a href="mailto:hello@paulbina.com" class="contact-link">hello@paulbina.com</a>
-        <a href="#" class="contact-link">Instagram</a>
-        <a href="#" class="contact-link">Behance</a>
+  <h2 class="section-title reveal" data-ro="Hai să facem ceva împreună" data-en="Let's Create Something Together">Hai să facem ceva împreună</h2>
+  <p class="section-subtitle reveal" data-ro="Ai un proiect sau o idee? Scrie-mi și vedem cum sună." data-en="Got a project or an idea? Drop me a message and let's see how it sounds.">Ai un proiect sau o idee? Scrie-mi și vedem cum sună.</p>
+
+  <div class="contact-grid reveal">
+    <div class="contact-info">
+      <div class="contact-item">
+        <span class="contact-label" data-ro="Email" data-en="Email">Email</span>
+        <a href="mailto:hello@paulbina.com">hello@paulbina.com</a>
+      </div>
+      <div class="contact-item">
+        <span class="contact-label" data-ro="Online" data-en="Online">Online</span>
+        <div class="social-links">
+          <a href="https://instagram.com/paulbina" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+          <a href="https://behance.net/paulbina" target="_blank" rel="noopener noreferrer" aria-label="Behance">Behance</a>
+          <a href="https://linkedin.com/in/paulbina" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+        </div>
       </div>
     </div>
-    <form class="contact-form reveal" onsubmit="handleSubmit(event)">
+
+    <form class="contact-form" onsubmit="handleSubmit(event)" aria-label="Formular de contact">
       <div class="form-row">
-        <div class="form-group">
-          <label class="form-label">Name</label>
-          <input type="text" class="form-input" placeholder="Your name" required />
-        </div>
-        <div class="form-group">
-          <label class="form-label">Email</label>
-          <input type="email" class="form-input" placeholder="your@email.com" required />
-        </div>
+        <input type="text" name="name" required aria-label="Nume">
+        <label data-ro="Numele tău" data-en="Your Name">Numele tău</label>
       </div>
-      <div class="form-group">
-        <label class="form-label">Project Type</label>
-        <select class="form-select">
-          <option value="">Select a service</option>
-          <option>Portrait Session</option>
-          <option>Editorial Photography</option>
-          <option>Commercial Project</option>
-          <option>Landscape / Travel</option>
-          <option>Event Photography</option>
-          <option>Other</option>
+      <div class="form-row">
+        <input type="email" name="email" required aria-label="Email">
+        <label data-ro="Email" data-en="Email">Email</label>
+      </div>
+      <div class="form-row">
+        <select name="project" required aria-label="Tipul proiectului">
+          <option value="" disabled selected data-ro="Ce te interesează?" data-en="What are you looking for?">Ce te interesează?</option>
+          <option value="portrait" data-ro="Ședință foto portret" data-en="Portrait Session">Ședință foto portret</option>
+          <option value="editorial" data-ro="Proiect editorial" data-en="Editorial Project">Proiect editorial</option>
+          <option value="commercial" data-ro="Proiect comercial" data-en="Commercial Project">Proiect comercial</option>
+          <option value="landscape" data-ro="Fotografie peisaj" data-en="Landscape Photography">Fotografie peisaj</option>
+          <option value="event" data-ro="Eveniment" data-en="Event">Eveniment</option>
+          <option value="other" data-ro="Altceva" data-en="Something Else">Altceva</option>
         </select>
       </div>
-      <div class="form-group">
-        <label class="form-label">Message</label>
-        <textarea class="form-textarea" rows="5" placeholder="Tell me about your project..." required></textarea>
+      <div class="form-row">
+        <textarea name="message" rows="4" required aria-label="Mesaj"></textarea>
+        <label data-ro="Povestește-mi pe scurt" data-en="Tell Me a Bit More">Povestește-mi pe scurt</label>
       </div>
-      <button type="submit" class="form-submit">Send Message</button>
+      <button type="submit" class="btn btn-primary form-submit" data-ro="Trimite" data-en="Send">Trimite</button>
     </form>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <p class="footer-copy">&copy; 2025 Paul Bina. All rights reserved.</p>
-  <div class="footer-social">
-    <a href="#">Instagram</a>
-    <a href="#">Behance</a>
-    <a href="#">LinkedIn</a>
+  <div class="footer-inner">
+    <p>&copy; 2025 Paul Bina</p>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="#portfolio" data-ro="Portofoliu" data-en="Work">Portofoliu</a>
+      <a href="#about" data-ro="Despre" data-en="About">Despre</a>
+      <a href="#contact" data-ro="Contact" data-en="Contact">Contact</a>
+    </nav>
   </div>
 </footer>
 

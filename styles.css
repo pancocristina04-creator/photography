@@ -69,6 +69,8 @@ nav.nav-scrolled {
   font-size: 1.6rem;
   font-weight: 300;
   letter-spacing: 0.08em;
+  position: relative;
+  top: 4px;
 }
 
 .nav-logo span {
@@ -118,7 +120,7 @@ nav.nav-scrolled {
   cursor: pointer;
   transition: all 0.3s;
   border-radius: 2px;
-  margin-left: -0.8rem;
+  margin-left: -1.2rem;
 }
 
 .lang-switch:hover {

@@ -118,6 +118,7 @@ nav.nav-scrolled {
   cursor: pointer;
   transition: all 0.3s;
   border-radius: 2px;
+  margin-left: -0.8rem;
 }
 
 .lang-switch:hover {
